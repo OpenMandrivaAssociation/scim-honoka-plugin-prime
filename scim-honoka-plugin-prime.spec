@@ -13,6 +13,7 @@ Group:      System/Internationalization
 License:    GPL
 URL:        http://nop.net-p.org/modules/pukiwiki/index.php?%5B%5Bhonoka%5D%5D
 Source0:    http://nop.net-p.org/files/honoka/%{src_name}-%{version}.tar.bz2
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root
 Requires:      prime >= %{prime_version}
 BuildRequires: scim-honoka-devel >= %{honoka_version}
 BuildRequires: prime >= %{prime_version}
