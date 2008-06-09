@@ -46,9 +46,13 @@ rm -f $RPM_BUILD_ROOT/%{scim_plugins_dir}/honoka/*.{a,la}
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%if %mdkversion < 200900
 %post -p /sbin/ldconfig
+%endif
 
+%if %mdkversion < 200900
 %postun -p /sbin/ldconfig
+%endif
 
 %files -f honoka-plugin-prime.lang
 %defattr(-,root,root)
